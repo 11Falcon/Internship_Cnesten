@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:#f9f9f9;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    padding:30px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+}
+
+.card{
+  position:absolute;
+  top:0;
+  left: 40vw;
+  padding:30px 10px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  z-index: 100;
+}
+.uploading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uploading h1{
+  color: aqua;
+}
+.upload{
+  transform: translate(0%,150%);
+  font-size: 16px;
+  background:white;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px black;
+  width: 350px;
+  outline: none;
+}
+.button_container{
+  display: flex;
+  justify-content: center;
+}
+.up_file{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: translate(0%,500%);
+  text-decoration:none;
+  color:#359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 30%;
+  font-weight : 600;
+  border-color: green;
+  box-sizing: border-box;
+}
+.close{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: translate(190%,1000%);
+  text-decoration:none;
+  color:#359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 30%;
+  font-weight : 600;
+  border-color: green;
+  box-sizing: border-box;
+}
+
+.up_file:hover{
+  background:#359381;
+  color:#f9f9f9;
+}
+.close:hover{
+  background:#359381;
+  color:#f9f9f9;
+}
+::-webkit-file-upload-button{
+  color: white;
+  background: #359381;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px #6b4559;
+  outline: none;
+}
+::-webkit-file-upload-button:hover{
+  background : #438a5e;
+}
+.navigation a {
+  text-decoration:none;
+  color:#359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight : 600;
+}
+
+.navigation a:hover ,
+.navigation .active{
+  background:#359381;
+  color:#f9f9f9;
+}
+.parallax{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height:100vh;
+}
+.uploader{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.falcon {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#display{
+  position:relative;
+  width:675px ;
+  height: 411px;
+  top: 200px;
+  left: 200px;
+  border:1px solid black;
+  background-position: center;
+  background-size:auto;
+}
+#image_input.input {
+  text-decoration:none;
+  color:#359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight : 600;
+  position:relative;
+  top: 200px;
+  left: 200px;
+  background-position: center;
+  background-size:auto;
+}
+#image_input.input .file-upload-button {
+  text-decoration:none;
+  color:#359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight : 600;
+}
+
+.file-upload {
+  display: inline-block;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  top: 200px;
+  left:200px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+.ash{
+  background-color:gold;
+  padding:10px 20px;
+  cursor:pointer;
+  border:none;
+}
+.mystyle{
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 3;
+  background-color: #86A8E7;
+}
+.bounce{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
