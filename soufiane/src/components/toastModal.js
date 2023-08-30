@@ -1,19 +1,19 @@
-import React, {useState} from "react";
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import { FaBars, FaCog, FaImages, FaEyeDropper, FaModx, FaLinode,FaDna } from 'react-icons/fa';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, {useState} from "react"
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
+import { FaBars, FaCog, FaImages, FaEyeDropper, FaModx, FaLinode,FaDna } from 'react-icons/fa'
+import {toast, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Modal from 'react-modal'
-import {BounceLoader, BarLoader, BeatLoader} from 'react-spinners'
-import {jsx} from '@emotion/react'
-import FileUploader from "./fileuploader";
+// import {BounceLoader, BarLoader, BeatLoader} from 'react-spinners'
+// import {jsx} from '@emotion/react'
+import FileUploader from "./fileuploader"
+Modal.setAppElement('#root')
 
-
-const loaderCSS = jsx`
-  margin-top: 25px;
-  margin-bottom: 25px;
-  display : flex;
-  `
+// const loaderCSS = jsx`
+//   margin-top: 25px;
+//   margin-bottom: 25px;
+//   display : flex;
+  // `
 const sidebarStyles = {
   width: '6vw',
   height: '70vw',
@@ -40,39 +40,39 @@ const customStyles = {
   },
 };
 function ToastModal() {
-    const [model1,setModel1] =useState(false);
-    const [model2,setModel2] =useState(false);
-    const [model3,setModel3] =useState(false);
-    const [model4,setModel4] =useState(false);
+    const [model1,setModel1] =useState(false)
+    const [model2,setModel2] =useState(false)
+    const [model3,setModel3] =useState(false)
+    const [model4,setModel4] =useState(false)
     const Programming = () =>{
       toast("Setting your Model!",{autoClose :2000,hideProgressBar:true})} 
     const Importing = () =>{
       toast("Import your Images",{autoClose :2000,hideProgressBar:true});
-      setModel1(true);
-      setModel2(false);
-      setModel3(false);
-      setModel4(false);
+      setModel1(true)
+      setModel2(false)
+      setModel3(false)
+      setModel4(false)
     } 
     const prepro = () => {
-      toast("Preprocessing",{autoClose :2000,hideProgressBar:true});
+      toast("Preprocessing",{autoClose :2000,hideProgressBar:true})
       setModel1(false)
-      setModel2(true);
-      setModel3(false);
-      setModel4(false);
+      setModel2(true)
+      setModel3(false)
+      setModel4(false)
     }
     const Model = () =>{
-      toast("Choose Your Model",{autoClose :2000,hideProgressBar:true});
+      toast("Choose Your Model",{autoClose :2000,hideProgressBar:true})
       setModel1(false)
-      setModel3(true);
-      setModel2(false);
-      setModel4(false);
+      setModel3(true)
+      setModel2(false)
+      setModel4(false)
     } 
     const Train = () => {
       toast("Start training",{autoClose :2000,hideProgressBar:true})
       setModel1(false)
-      setModel3(false);
+      setModel3(false)
       setModel4(true)
-      setModel2(false);
+      setModel2(false)
   }
 
   return (

@@ -27,8 +27,8 @@ function App() {
             <Model position={[0, 0.25, 0]} url={MODELS[model]} />
             <ContactShadows scale={20} blur={10} far={20} />
             </group>
-            <Box position={[-1.2, 0, 0]} />,
-            <Box position={[1.2, 0, 0]} />,
+              <Box position={[-1.2, 0, 0]}/>
+              <Box position={[1.2, 0, 0]}/>
             </Canvas>
         </>
     </div>
