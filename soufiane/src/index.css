@@ -75,11 +75,11 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transform: translate(0%,500%);
+  transform: translate(0%,200%);
   text-decoration:none;
   color:#359381;
-  padding: 6px 15px;
-  border-radius: 20px;
+  padding: 15px 27px;
+  border-radius: 35px;
   margin: 0 30%;
   font-weight : 600;
   border-color: green;
@@ -89,11 +89,11 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transform: translate(190%,1000%);
+  transform: translate(-190%,600%);
   text-decoration:none;
   color:#359381;
-  padding: 6px 15px;
-  border-radius: 20px;
+  padding: 15px 27px;
+  border-radius: 35px;
   margin: 0 30%;
   font-weight : 600;
   border-color: green;
@@ -240,4 +240,37 @@ code {
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+#rotation{
+  margin-right: 6px;
+  margin-top:50px;
+  /* pointer-events: none; */
+}
+label{
+  font-size: 31;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+#rotation:checked{
+  accent-color: #7d2ae8;
+}
+#rotation:checked ~ label{
+  color: #7d2ae8;
+}
+#flip{
+  margin-right: 6px;
+  margin-top:50px;
+  /* pointer-events: none; */
+}
+#flip:checked{
+  accent-color: #7d2ae8;
+}
+#flip:checked ~ label{
+  color: #7d2ae8;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the spacing as needed */
 }

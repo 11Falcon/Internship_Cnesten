@@ -7,6 +7,8 @@ import Modal from 'react-modal'
 // import {BounceLoader, BarLoader, BeatLoader} from 'react-spinners'
 // import {jsx} from '@emotion/react'
 import FileUploader from "./fileuploader"
+import Augmentation from "./Augmentation"
+import ModelUploader from "./ModelUploader"
 Modal.setAppElement('#root')
 
 // const loaderCSS = jsx`
@@ -79,30 +81,30 @@ function ToastModal() {
     <div>
         <Modal isOpen={model1}
         style={customStyles}>
-            {/* <h1>Import Your Data</h1>
-            <h2>Your data</h2>
-            <BounceLoader css={loaderCSS} size={40} color="red" loading/>
-            <BarLoader loading />
-            <BeatLoader loading/> */}
+
         <FileUploader/>
-        <button className="close" onClick={()=>{setModel1(false)}}>Close</button>
+        <div className="button-container">
+          <button className="close" onClick={()=>{setModel1(false)}}>Close</button>
+          <button className="close" onClick={()=>{setModel1(false)}}>Done</button>
+        </div>
+
         </Modal>
 
       <Modal isOpen={model2}
         style={customStyles}>
-        <h2> Preprocessing</h2>
-        <p> Choose your preprocessing </p>
-        <div>
-        <button onClick={()=>{setModel2(false)}}>Close</button>
+          <Augmentation/>
+        <div className="button-container">
+        <button className="close" onClick={()=>{setModel2(false)}}>Close</button>
+        <button className="close" onClick={()=>{setModel2(false)}}>Done</button>
         </div>
       </Modal>
 
       <Modal isOpen={model3}
         style={customStyles}>
-        <h2> Model</h2>
-        <p> Your model</p>
-        <div>
-        <button onClick={()=>{setModel3(false)}}>Close</button>
+          <ModelUploader/>
+        <div className="button-container">
+        <button className="close" onClick={()=>{setModel3(false)}}>Close</button>
+        <button className="close" onClick={()=>{setModel3(false)}}>Done</button>
         </div>
       </Modal>
 
@@ -110,8 +112,9 @@ function ToastModal() {
         style={customStyles}>
         <h2> Trainning the Model</h2>
         <p> Your model</p>
-        <div>
-        <button onClick={()=>{setModel4(false)}}>Close</button>
+        <div className="button-container">
+        <button className="close" onClick={()=>{setModel4(false)}}>Close</button>
+        <button className="close" onClick={()=>{setModel4(false)}}>Done</button>
         </div>
       </Modal>
       <div className="main-content">
